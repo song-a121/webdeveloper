@@ -1,0 +1,48 @@
+*{ margin:0; padding:0; }
+ul, dl, ol{ list-style: none; }
+a{ text-decoration: none; color:#222; }
+img{ display: block; }
+
+
+/* 공통 class */
+.container{ width: 1000px; margin:0 auto; } /* 가운데정렬을 위한 박스 */
+.grey{ background: #ccc; } /* 검수 차원에서 만들어놓는 class */
+
+
+/* float를 자식으로 가지고 있는 부모에 적용하는 class */
+.clear:after{ content:""; display:block; clear:both }
+
+/* 상단 */
+#hd{ position: relative; /* z-index를 위해서 position을 넣어줌. */
+     z-index: 1000; }
+#hd:after, .container:after{ content:""; display:block; clear:both }
+
+
+/* 로고 */
+#hd h1{ float: left; }
+
+/* 상단 링크들 */
+#hd a{ display: block; } /* 정말 중요합니다 !!!! */
+
+/* 네이게이션 */
+#gnb{ float: right; }
+
+/* 대메뉴만, 1차 메뉴 */
+#gnb>li{ display: inline-block;
+         position: relative; /* .d2의 부모(abs)*/
+         padding: 0 15px;
+         background: grey;
+         width: }
+#gnb .d1{ line-height: 46px; /* 로고의 이미지 높이와 동일하게 잡는다 */
+          font-size: 1.2em;}
+
+/* 소메뉴 */
+#gnb .d2{ position: absolute;
+          left:-10px; top: 100%; /* 부모 키 만큼 내려오겠다! (top: 46px ->로고 사이즈, line-height값) */
+          width: 100px;
+          background: yellow;
+          padding: 10px;
+          display: none;
+          font-size: 0.7em;
+          }
+#gnb>li:hover .d2{ display: block }
