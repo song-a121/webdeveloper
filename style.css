@@ -3,7 +3,7 @@ ul, dl, ol{ list-style: none; }
 a{ text-decoration: none; color:#222; }
 img{ display: block; }
 
-
+/**/
 /* 공통 class */
 .container{ width: 1000px; margin:0 auto; } /* 가운데정렬을 위한 박스 */
 .grey{ background: #ccc; } /* 검수 차원에서 만들어놓는 class */
